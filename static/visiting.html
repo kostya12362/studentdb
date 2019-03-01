@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang=”uk”>
+
+	<head>
+		<meta charset=”UTF-8”/>
+		<title>Сервіс Обліку Студентів</title>
+		<meta name=”description” value=”Система Обліку Студентів Навчального Закладу” />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+		<!-- Include Styles -->
+		<!-- Latest compiled   and minified CSS -->
+		<link  rel = "stylesheet"  href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="./css/main.css"
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<style type=”text/css”>.col-xs-12, .col-xs-4, .col-xs-8 {border: 1px solid red;}</style>
+	</head>
+	<body>
+		<!-- Start Container -->
+		<div class="container">
+
+			<!-- Start Header -->
+			<div class="row" id="header">
+
+				<!-- Logo -->
+				<div class="col-xs-8">
+					<h1>Сервіс Обліку Студентів</h1>
+				</div>
+
+				<!-- Groups Selector -->
+				<div class="col-xs-4" id="group-selector">
+					<strong>Група:</strong>
+					<select>
+						<option value="">Усі Студенти</option>
+						<option value="">МтМ - 21, Подоба Віталій (No 254)</option>
+						<option value="">МтМ - 22, Корост Андрій (No 2123)</option>
+					</select>
+				</div>
+			</div>
+			<!-- End Header -->
+
+			<!-- Start SubHeader -->
+			<div class="row" id="sub-header">
+				<div class="collapse navbar-collapse col-xs-12">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#">Студенти</a></li>
+						<li role="presentation"><a href="#">Відвідування</a></li>
+						<li role="presentation"><a href="#"">Групи</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- End SubHeader -->
+
+			<!-- Start Main Page Content -->
+			<div class="row" id="content-columns">
+				<div class="col-xs-12" id="content-column">
+
+					<!-- Status Message -->
+					<div class="alert alert-warning">
+						Зміни скасовано.
+					</div>
+					<h2>База Студентів</h2>
+
+					<!-- Add Student Button -->
+					<a class="btn btn-primary" href="#">Додати Студента</a>
+					<div>
+						<!-- Start Students Listing -->
+						<div class="text-center">
+							<nav>
+								<ul class="pagination">
+									<li><a href="#">&#8592;</a></li>
+									<li><a href="#">Жовтень</a></li>
+									<li><a href="#">&#8594;</a></li>
+								</ul>
+							</nav>
+						</div>
+						<table class="table table-hover table-bordered">
+							<thead>
+								<tr>
+									<th rowspan="2" scope="col">#</th>
+									<th rowspan="2" scope="col">Студенти</th>
+									<th scope="col">Ср 1</th>
+									<th scope="col">Чт 2</th>
+									<th scope="col">Пт 3</th>
+									<th scope="col">Сб 4</th>
+									<th scope="col">Нд 5</th>
+									<th scope="col">Пн 6</th>
+									<th scope="col">Вт 7</th>
+									<th scope="col">Ср 8</th>
+									<th scope="col">Чт 9</th>
+									<th scope="col">Пт 10</th>
+									<th scope="col">Сб 11</th>
+									<th scope="col">Нд 12</th>
+									<th scope="col">Пн 13</th>
+									<th scope="col">Вт 14</th>
+									<th scope="col">Ср 15</th>
+									<th scope="col">Чт 16</th>
+									<th scope="col">Пт 17</th>
+									<th scope="col">Сб 18</th>
+									<th scope="col">Нд 19</th>
+									<th scope="col">Пн 20</th>
+									<th scope="col">Вт 21</th>
+									<th scope="col">Ср 22</th>
+									<th scope="col">Чт 23</th>
+									<th scope="col">Пт 24</th>
+									<th scope="col">Сб 25</th>
+									<th scope="col">Нд 26</th>
+									<th scope="col">Пн 27</th>
+									<th scope="col">Вт 28</th>
+									<th scope="col">Ср 29</th>
+									<th scope="col">Чт 30</th>
+									<th scope="col">Пт 31</th>
+								</tr>
+								<tr>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+									<th scope="col">6</th>
+									<th scope="col">7</th>
+									<th scope="col">8</th>
+									<th scope="col">9</th>
+									<th scope="col">10</th>
+									<th scope="col">11</th>
+									<th scope="col">12</th>
+									<th scope="col">13</th>
+									<th scope="col">14</th>
+									<th scope="col">15</th>
+									<th scope="col">16</th>
+									<th scope="col">17</th>
+									<th scope="col">18</th>
+									<th scope="col">19</th>
+									<th scope="col">20</th>
+									<th scope="col">21</th>
+									<th scope="col">22</th>
+									<th scope="col">23</th>
+									<th scope="col">24</th>
+									<th scope="col">25</th>
+									<th scope="col">26</th>
+									<th scope="col">27</th>
+									<th scope="col">28</th>
+									<th scope="col">29</th>
+									<th scope="col">30</th>
+									<th scope="col">31</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td><a title="Редагувати" href="#">Остапенко Костя</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+  									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+									<td>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+  										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- End Students Listing -->
+						
+					</div>
+				</div>
+			</div>
+			<!-- End Main Page Content -->
+
+			<!-- Start Footer -->
+			<div class="row" id="footer">
+				<div class="col-xs-12">
+				&copy; 2014 Сервіс Обліку Студентів
+				</div>
+			</div>
+			<!-- End Footer -->
+		</div>
+		<!-- End Container -->
+		<!-- Javascripts Section -->
+		<!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>

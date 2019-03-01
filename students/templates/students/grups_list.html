@@ -1,0 +1,65 @@
+{% extends "students/base.html" %}
+
+{% load static from staticfiles %}
+
+{% block meta_title %}Студенти{% endblock meta_title %}
+
+{% block title %}База Студентів{% endblock title %}
+
+{% block content %}
+
+<!-- Add Student Button -->
+<a class="btn btn-primary" href="#">Додати Студента</a>
+<div>
+	<!-- Start Students Listing -->
+	<table class="table table-hover table-striped">
+		<thead>
+			<tr>
+				<th><a href="#">#</a></th>
+				<th><a href="#">Назва</th>
+				<th><a href="#">Староста &uarr;</a></th>
+				<th>Дії</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for group in groups %}
+			<tr>
+				<td>1</td>
+				<td><a a title="Редагувати" href="#">{{ group.num }}</a></td>
+				<td><a title="Редагувати" href="#">{{ group.last_name }} {{ group.first_name }}</a></td>
+				<td>
+					<div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Дії 
+						<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu"  aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">Відвідування</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">Редагування</a>
+							</li>
+							<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#">Видалити</a>
+							</li>
+						</ul>
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<!-- End Students Listing -->
+	<nav>
+		<ul class="pagination">
+			<li><a href="#">&laquo;</a></li>
+			<li><a href="#">1</a></li>
+			<li class="active"><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">&raquo;</a></li>
+		</ul>
+	</nav>
+</div>
+{% endblock content %}

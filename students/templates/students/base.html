@@ -1,0 +1,102 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang=”uk”>
+
+	<head>
+		<meta charset=”UTF-8”/>
+		<title>Сервіс Обліку Студентів - {% block meta_title %}{% endblock meta_title %} </title>
+		<meta name=”description” value=”Система Обліку Студентів Навчального Закладу” />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
+		<!-- Include Styles -->
+		<!-- Latest compiled   and minified CSS -->
+		<link  rel = "stylesheet"  href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="{{ PORTAL_URL }}{% static "css/main.css" %}">
+
+		{% block extra_css %}{% endblock extra_css %}
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		{% block extra_js %}{% endblock extra_js %}
+		<!-- STYLE -->
+		<style type=”text/css”>.col-xs-12, .col-xs-4, .col-xs-8 {border: 1px solid red;}</style>
+	</head>
+
+	<body>
+
+		<!-- Start Container -->
+		<div class="container">
+
+			<!-- Start Header -->
+			<div class="row" id="header">
+
+				<!-- Logo -->
+				<div class="col-xs-8">
+					<h1>Сервіс Обліку Студентів</h1>
+				</div>
+
+				<!-- Groups Selector -->
+				<div class="col-xs-4" id="group-selector">
+					<strong>Група:</strong>
+					<select>
+						<option value="">Усі Студенти</option>
+						<option value="">МтМ - 21, Подоба Віталій (No 254)</option>
+						<option value="">МтМ - 22, Корост Андрій (No 2123)</option>
+					</select>
+				</div>
+			</div>
+			<!-- End Header -->
+
+			<!-- Start SubHeader -->
+
+			<div class="row" id="sub-header">
+				<div class="collapse navbar-collapse col-xs-12">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" {% if request.path == "/" %} class="active" {% endif %}"><a href="{% url "students" %}">Студенти</a></li>
+						<li role="presentation" {% if "/journal" in request.path %} class="active" {% endif %}" ><a href="{% url "journal" %}">Відвідування</a></li>
+						<li role="presentation" {% if "/groups" in request.path %} class="active" {% endif %}" ><a href="{% url "groups" %}">Групи</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- End SubHeader -->
+
+			<!-- Start Content Columns-->
+
+			<div class="row" id="content-columns">
+				<div class="col-xs-12" id="content-column">
+					{% comment "Not used alert so far" %}
+					<!-- Status Message -->
+					<div class="alert alert-warning" role="alert">
+						Status Update!
+					</div>
+					{% endcomment %}
+
+					<h2>{% block title %}{% endblock title %}</h2>
+					{% block content %}{% endblock content %}
+				</div>
+			</div>
+
+			<!-- End Content Columns -->
+
+			<!-- Start Footer -->
+			<div class="row" id="footer">
+				<div class="col-xs-12">
+				&copy; 2014 Сервіс Обліку Студентів
+				</div>
+			</div>
+			<!-- End Footer -->
+		</div>
+		<!-- End Container -->
+
+		<!-- Javascripts Section -->
+		<!-- Optional JavaScript -->
+	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		
+	</body>
+</html>
